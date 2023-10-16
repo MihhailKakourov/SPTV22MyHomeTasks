@@ -1,6 +1,4 @@
-import tasks.CreateBooksArray;
-import tasks.TempConverter;
-import tasks.TensAndOnes;
+import tasks.*;
 
 import java.util.Scanner;
 
@@ -20,6 +18,9 @@ public class MyHomeTasks {
             System.out.println("1. Конвертер температуры");
             System.out.println("2. Десятки и единицы");
             System.out.println("3. Создание массива из 5 книг");
+            System.out.println("4. Демо Array");
+            System.out.println("5. Температура в году");
+            System.out.println("6. Тест по таблице умножения");
 
             int task = scanner.nextInt();
             scanner.nextLine();
@@ -45,6 +46,22 @@ public class MyHomeTasks {
                     CreateBooksArray createBooksArray = new CreateBooksArray();
                     createBooksArray.doCreateArray();
                     break;
+                case 4:
+                    System.out.println("Выбрана задача демо Array");
+                    ArrayDemo arrayDemo = new ArrayDemo();
+                    arrayDemo.doCreateArray();
+                    break;
+                case 5:
+                    System.out.println("Выбрана задача погода");
+                    Weather weather = new Weather();
+                    weather.showWeather();
+                    break;
+                case 6:
+                    System.out.println("Выбрана задача тест по таблице умножения");
+                    Quiz quiz = new Quiz();
+                    quiz.startQuiz();
+                    break;
+
                 default:
                     System.out.println("Неправильный выбор. Пожалуйста, выберите снова.");
             }

@@ -55,11 +55,15 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
-                "title='" + title + '\'' +
-                ", authors=" + Arrays.toString(authors) +
-                ", publishedYear=" + publishedYear +
-                '}';
+        StringBuilder authorNames = new StringBuilder();
+        for (int i = 0; i < authors.length; i++) {
+            if (i > 0) {
+                authorNames.append(", ");
+            }
+            authorNames.append(authors[i].toString());
+        }
+
+        return "Title: " + title + ", Authors: " + authorNames.toString() + ", Published Year: " + publishedYear;
     }
 
 
