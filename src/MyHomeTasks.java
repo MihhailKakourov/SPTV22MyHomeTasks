@@ -3,10 +3,9 @@ import tasks.*;
 import java.util.Scanner;
 
 public class MyHomeTasks {
-    private Scanner scanner;
 
     public MyHomeTasks(){
-        this.scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
     }
     public void run(){
         Scanner scanner = new Scanner(System.in);
@@ -21,6 +20,9 @@ public class MyHomeTasks {
             System.out.println("4. Демо Array");
             System.out.println("5. Температура в году");
             System.out.println("6. Тест по таблице умножения");
+            System.out.println("7. Китайский календарь");
+            System.out.println("8. Содержит ли текст все буквы алфавита");
+            System.out.print("Ваш выбор: ");
 
             int task = scanner.nextInt();
             scanner.nextLine();
@@ -60,6 +62,16 @@ public class MyHomeTasks {
                     System.out.println("Выбрана задача тест по таблице умножения");
                     Quiz quiz = new Quiz();
                     quiz.startQuiz();
+                    break;
+                case 7:
+                    System.out.println("Выбрана задача китайский календарь");
+                    ChineseCalendar chineseCalendar = new ChineseCalendar();
+                    chineseCalendar.showCalendar();
+                    break;
+                case 8:
+                    System.out.println("Выбрана задача содержит ли текст все буквы алфавита");
+                    LetterChecker letterChecker = new LetterChecker();
+                    LetterChecker.checkAlphabet();
                     break;
 
                 default:
